@@ -7,6 +7,10 @@ const iniState = {
 }
 
 const postReducer = (state = iniState, action) => {
+    switch (action.type) {
+        case 'ADD_POST':
+            console.log('created post', action.post);     
+    }
     return state
 }
 

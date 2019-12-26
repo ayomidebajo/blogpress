@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Navbar from './components/layouts/navbar/Navbar'
+ import './App.css'
+import Footer from './components/layouts/footer/Footer'
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import Fashion from './components/pages/Fashion';
+// import Home from './components/pages/Home';
+import Health from './components/pages/Health';
+import Tech from './components/pages/Tech';
+import World from './components/pages/World';
+import CreatePost from './components/posts/CreatePost';
+import Dashboard from './components/dashboard/Dashboard';
+import PostDetails from '../src/components/posts/PostDetails';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+export class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+      <Navbar />
+        <Switch>
+          <Route exact path='/' component={Dashboard}/>
+          <Route path='/post/:id' component={PostDetails} />
+          <Route path='/create' component={CreatePost} />
+          <Route path='/health' component={Health} />
+          <Route path='/tech' component={Tech} />
+          <Route path='/world' component={World} />
+          <Route path='/fashion' component={Fashion} />
+        </Switch>
+        <Footer />
+      </BrowserRouter>
+    )
+  }
 }
+
+
 
 export default App;
