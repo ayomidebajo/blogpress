@@ -8,7 +8,6 @@ const SignedInLinks = () => {
             <li><NavLink className="black-text" to='/world'>World</NavLink></li>
             <li><NavLink className="black-text" to='/fashion'>Fashion</NavLink></li>
             <li><NavLink className="black-text" to='/tech'>Tech</NavLink></li>
-            <li><NavLink className="black-text" to='/create'>create post</NavLink></li>
         </ul>
       </div>
     )
