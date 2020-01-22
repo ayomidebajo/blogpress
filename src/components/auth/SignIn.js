@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { signIn } from '../../store/actions/authActions';
 // import postReducer from '../../store/reducers/postReducer';
 import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
  class SignIn extends Component {
      state = {
@@ -44,7 +45,15 @@ import { Redirect } from 'react-router-dom';
                     </div>
                 </div>
                 </form>
-                
+                <div className="fixed-action-btn bottom">
+            <Link to='/create'>
+              <a className="btn-floating btn-large grey darken-2">
+              <i className="large material-icons" onClick={this.handleClick}>
+                mode_edit
+              </i>
+              </a>
+            </Link>
+          </div>
             </div>
         )
     }
