@@ -1,0 +1,22 @@
+.btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 1em 2em;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: -0.177928px;
+  margin: 4em 0;
+}
+
+.btn--black {
+  border: 1px solid #000000;
+  color: #000;
+  transition: 0.5s;
+  width: 100%;
+
+  &:hover {
+    background: #000000;
+    color: #ffffff;
+  }
+}

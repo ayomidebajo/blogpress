@@ -1,0 +1,36 @@
+.landing--right__container {
+  background: linear-gradient(
+      0deg,
+      rgba(163, 49, 82, 0.9),
+      rgba(163, 49, 82, 0.9)
+    ),
+    url("../img/landing.png") no-repeat center center / cover;
+  width: 100%;
+  height: 100vh;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & h3 {
+    font-family: Tenor Sans;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  & p {
+    font-family: Tenor Sans;
+    font-weight: normal;
+    font-size: 24px;
+    // line-height: 28px;
+    letter-spacing: 0.01em;
+    border-left: 2px solid #ffffff;
+  }
+
+  .landing--right--text__container {
+    width: 500px;
+    margin: auto;
+  }
+}

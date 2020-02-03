@@ -1,73 +1,40 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { createPost } from '../../store/actions/PostActions';
-import { Redirect } from 'react-router-dom';
-// import ReactQuill from 'react-quill';
-// import 'react-quill/dist/quill.snow.css';
-// import { Card, CardBody, Form, FormInput, Button } from "shards-react";
-// import "../../styles/works/quill.scss";
+import React, { Component } from "react";
+// import { connect } from "react-redux";
+// import { createPost } from "../../store/actions/PostActions";
+// import { Redirect } from "react-router-dom";
+import { Editor, EditorState, RichUtils } from "draft-js";
 
- class CreatePost extends Component {
-     state = {
-        title: '',
-        content: ''
-     }
+class CreatePost extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      editorState: EditorState.createEmpty()
+    };
+    this.onChange = this.onChange.bind(this);
+    this.toggleInlineStyle = this.toggleInlineStyle.bind(this);
+  }
 
-     //handler for each input
-     handleChange = (e) => {
-       this.setState({
-          [e.target.id]:e.target.value
-       })
-        
-     }
-
-     //handler for each submission
-     handleSubmit = (e) => {
-         e.preventDefault();
-         console.log(this.state); 
-        //connected it to the state here
-        this.props.createPost(this.state);
-        //redirects to the homepage/dashboard
-        this.props.history.push('/');
-     }
-
-    render() {
-      const { auth } = this.props;
-      if (!auth.uid) return <Redirect to='/signin'/>
-        return (
-<div className="container">
-  <form onSubmit={this.handleSubmit} className="white">
-    <h5 className="grey-text text-darken-3">Create Post</h5>  
-      <div className="input-field">
-        <label htmlFor="title">Title</label>  
-          <input type="text" id="title" onChange={this.handleChange}/>
+  onChange(editorState) {
+    this.setState({ editorState });
+  }
+  toggleInlineStyle(e) {
+    e.preventDefault();
+    let;
+  }
+  render() {
+    return (
+      <div className="my-little-app">
+        <h1>Playing with Draft.js!</h1>
+        <div className="draft-editor-wrapper">
+          <Editor
+            editorState={this.state.editorState}
+            onChange={this.onChange}
+            onMouseDown={}
+          />
+        </div>
       </div>
-      <div className="input-field">
-        <label htmlFor="content">content</label>  
-          <input type="text" id="content" onChange={this.handleChange}/>
-                
-      </div>
-      <div className="input-field">
-        <button className="btn blue lighten-1 z-depth-0">Create post</button>
-      </div>
-  </form>                
-</div>
-
-        )
-    }
-}
-
-const mapstateToProps = (state) => {
-  return {
-    auth: state.firebase.auth
-  } 
-}
-
-//dispatching actions from redux and connecting it to the current state here
-const mapDispatchToProps = (dispatch) => {
-  return {
-    createPost: (post) => dispatch(createPost(post))
+    );
   }
 }
 
-export default connect(mapstateToProps, mapDispatchToProps)(CreatePost)
+export default CreatePost;
