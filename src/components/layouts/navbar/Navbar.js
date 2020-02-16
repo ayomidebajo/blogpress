@@ -1,16 +1,19 @@
 import React from "react";
 import SignedInLinks from "../links/SignedInLinks";
 import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
 
 //Navigation bar
-const Navbar = () => {
+const Navbar = props => {
   // console.log(auth);
+  const { auth, profile } = props;
 
-  return (
-    <nav className="nav-wrapper">
-      <SignedInLinks />
-    </nav>
+  const links = auth.uid ? (
+    <SignedInLinks profile={profile} />
+  ) : (
+    <Redirect to="/" />
   );
+  return <nav className="nav-wrapper">{links}</nav>;
 };
 
 const mapStateToProps = state => {

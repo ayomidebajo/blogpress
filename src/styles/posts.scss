@@ -1,0 +1,16 @@
+.loading {
+  color: black;
+}
+
+.projects-section {
+  height: 40vh;
+  width: 100%;
+  background-color: #ccc;
+}
+
+.blog--card__container {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
+}

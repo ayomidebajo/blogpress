@@ -25,7 +25,7 @@ class SignUp extends Component {
 
   render() {
     const { auth, authError } = this.props;
-    if (auth.uid) return <Redirect to="/" />;
+    if (auth.uid) return <Redirect to="/home" />;
     return (
       <div className="login--container">
         {/* there should be an if statement for the routing of the logo (blogpress) */}
@@ -43,11 +43,16 @@ class SignUp extends Component {
           </header>
           <div className="form__container">
             <form onSubmit={this.handleSubmit} className="form--content">
-              <h3 className="form-title">Log in</h3>
+              <h3 className="form-title">Sign up</h3>
               <div className="name">
-                <label htmlFor="name">Your full name</label>
+                <label htmlFor="name">Your first name</label>
                 <input type="text" id="name" onChange={this.handleChange} />
               </div>
+              <div className="name">
+                <label htmlFor="name">Your last name</label>
+                <input type="text" id="name" onChange={this.handleChange} />
+              </div>
+
               <div className="email">
                 <label htmlFor="email">Your email</label>
                 <input type="email" id="email" onChange={this.handleChange} />
@@ -60,15 +65,12 @@ class SignUp extends Component {
                   onChange={this.handleChange}
                 />
               </div>
-              <button className="btn btn--black">Log in</button>
-            </form>
-            {/*to check for login failed */}
-            {/* <div className="input-field">
-              <button className="btn blue lighten-1 z-depth-0">Login</button>
-              <div className="red-text center">
+              <div className="input-field">
+                <button className="btn btn--black">Sign up</button>
                 {authError ? <p>{authError}</p> : null}
               </div>
-            </div> */}
+            </form>
+            {/*to check for login failed */}
           </div>
         </aside>
         <Landing />

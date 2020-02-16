@@ -9,10 +9,10 @@ import { Redirect } from "react-router-dom";
 //dashboard
 class Dashboard extends Component {
   render() {
-    // console.log(this.props);
+    console.log(this.props);
     const { posts, auth } = this.props;
 
-    if (!auth.uid) return <Redirect to="/signin" />;
+    if (!auth.uid) return <Redirect to="/" />;
     return (
       <div className="container">
         <div className="dashboard-container">
@@ -43,7 +43,8 @@ class Dashboard extends Component {
 const mapStateToProps = state => {
   console.log(state);
   return {
-    posts: state.firestore.ordered.posts,
+    posts: state.post.post,
+    // posts: state.firestore.ordered.posts,
     auth: state.firebase.auth
   };
 };

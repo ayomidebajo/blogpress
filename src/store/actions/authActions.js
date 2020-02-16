@@ -41,8 +41,7 @@ export const signUp = newUser => {
           .doc(resp.user.uid)
           .set({
             firstname: newUser.firstName,
-            lastName: newUser.lastName
-            // initials:  newUser.firstName[0] + newUser.lastName[0]
+            lastname: newUser.lastName
           });
       })
       .then(() => {
@@ -50,6 +49,25 @@ export const signUp = newUser => {
       })
       .catch(err => {
         dispatch({ type: "SIGNUP_ERROR", err });
+      });
+  };
+};
+
+export const upDate = () => {
+  return (dispatch, { getFirebase }) => {
+    const firebase = getFirebase();
+    const user = firebase.auth().currentUser;
+
+    user
+      .updateProfile({
+        displayName: "",
+        photoURL: ""
+      })
+      .then(() => {
+        dispatch({ type: "Update Successful" });
+      })
+      .catch(() => {
+        dispatch({ type: "Oops! An error occured" });
       });
   };
 };

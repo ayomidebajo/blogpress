@@ -37,9 +37,7 @@ const SignedInLinks = props => {
         </NavLink>
       </li>
 
-      <li>
-        <img src="" className="avatar" alt="User Profile" />
-      </li>
+      <li>{props.displayName}</li>
     </ul>
   );
 };

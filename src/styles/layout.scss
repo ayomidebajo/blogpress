@@ -1,3 +1,4 @@
+@import "./mixins";
 @import "./navbar";
 @import "./landing";
 @import "./signin";
@@ -6,6 +7,8 @@
 @import "./buttons";
 @import "./dashboard";
 @import "./createpost";
+@import "./posts.scss";
+@import "./base";
 
 $colors: (
   primary: #000000,
