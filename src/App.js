@@ -18,7 +18,7 @@ export class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route path="/home" component={Home} />
-          <Route path="/post/:id" component={PostDetails} />
+          <Route path="/post/:id" component={PostSummary} />
           <Route path="/create" component={Post} />
           <Route path="/post" component={Post} />
           <Route path="/health" component={Health} />

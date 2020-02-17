@@ -2,15 +2,14 @@ import React from "react";
 
 //outputting posts on the dashboard
 const PostSummary = ({ post }) => {
-  return (
-    <div className="container">
-      <div className="row s4 m6">
-        <div className="card blue-grey darken-1">
-          <div className="card-content white-text">
-            <div className="post--container">{post.content}</div>
-          </div>
-        </div>
-      </div>
+  return(
+     <div className="post--container">
+    <div className="image--container"/>
+   <span className="title">{post.title}</span> 
+    <p className="content">
+    {post.content}</p>
+
+    <button className="posts-btn">Read more</button>
     </div>
   );
 };

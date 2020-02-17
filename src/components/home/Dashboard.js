@@ -19,16 +19,14 @@ class Dashboard extends Component {
           <div className="row">
             <div className="col s12 m6">
               <PostList posts={posts} />
-              <div className="fixed-action-btn bottom">
+              <div className="btn-create">
                 <Link to="/create">
-                  <a className="btn-floating btn-large grey darken-2">
-                    <i
-                      className="large material-icons"
-                      onClick={this.handleClick}
-                    >
-                      mode_edit
-                    </i>
-                  </a>
+                  <i
+                    className="large material-icons"
+                    onClick={this.handleClick}
+                  >
+                    mode_edit
+                  </i>
                 </Link>
               </div>
             </div>

@@ -29,3 +29,13 @@
   color: #ffffff;
   margin-left: 100vh;
 }
+
+.btn-create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 60%;
+}

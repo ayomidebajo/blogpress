@@ -1,8 +1,8 @@
 const iniState = {
   post: [
-    { id: 1, content: "something" },
-    { id: 2, content: "something is needed here" },
-    { id: 3, content: "i need a lot of money" }
+    { id: 1, title: "something", content: "there should be something here though, I just don't know what to write here, oh well, It's just for testing purposes"},
+    { id: 2, title: "something is needed here", content: "there should be something here though, I just don't know what to write here, oh well, It's just for testing purposes"},
+    { id: 3, title: "i need a lot of money", content: "there should be something here though, I just don't know what to write here, oh well, It's just for testing purposes"}
   ]
 };
 

@@ -1,4 +1,5 @@
 .footer--container {
+  height: 20vh;
   background: #000000;
   position: absolute;
   bottom: 0;
@@ -6,9 +7,17 @@
   right: 0;
 }
 
-h5 {
-  color: #ffffff;
+.links--container {
+  margin-top: 50px;
+  .about {
+    color: #ffffff;
+  }
+  .faq {
+    color: #ffffff;
+  }
 }
-p {
-  color: #ffffff;
+
+.footer-copyright {
+  color: white;
 }
+
