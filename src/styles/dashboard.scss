@@ -1,1 +1,63 @@
+.dashboard-container {
+  // display: flex;
+  & h3 {
+    font-family: Tenor Sans;
+    margin: 10px 0 30px 0;
+  }
 
+  .featured--container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .fashion-container {
+      background: url(../img/RectangleF.png);
+      width: 604px;
+      height: 300px;
+    }
+    .health-container {
+      background: url(../img/RectangleH.png);
+      width: 604px;
+      height: 300px;
+    }
+  }
+  .blog--card__container {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+  }
+  .hr {
+    margin: 50px 0 40px 0;
+    border-bottom: 1px solid rgb(92, 89, 89);
+  }
+
+  .vr {
+    border-left: 1px solid rgb(92, 89, 89);
+    margin: 0 10px 0 10px;
+  }
+  .latest--container {
+    display: flex;
+
+    .cards--container {
+      background: white;
+      width: 390px;
+      height: 300px;
+
+      .image-de {
+        width: 390px;
+        height: 300px;
+        background: url(../img/RectangleDe.png);
+      }
+      .image-dr {
+        width: 390px;
+        height: 300px;
+        background: url(../img/RectangleDr.png);
+      }
+      .image-sw {
+        width: 390px;
+        height: 300px;
+        background: url(../img/RectangleWS.png);
+      }
+    }
+  }
+}

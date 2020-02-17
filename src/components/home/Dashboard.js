@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PostList from "../posts/PostList";
+// import PostList from "../posts/PostList";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { firestoreConnect } from "react-redux-firebase";
@@ -16,7 +16,42 @@ class Dashboard extends Component {
     return (
       <div className="container">
         <div className="dashboard-container">
-          <PostList posts={posts} />
+          <h3>Featured</h3>
+          <div className="featured--container">
+            <div className="fashion-container">
+              <Link to="/fashion">
+                <button className="btn-featured">Fashion</button>
+              </Link>
+            </div>
+            <div className="health-container">
+              <Link to="/health">
+                <button className="btn-featured">Health</button>
+              </Link>
+            </div>
+          </div>
+          <div className="hr"></div>
+          <h3>Latest from Tech</h3>
+          <div className="latest--container">
+            <div className="cards--container">
+              <div className="image-de"></div>
+              <h5> How I landed a fullstack job without a degree</h5>
+              <button className="btn">Read more...</button>
+            </div>
+            <span className="vr" />
+            <div className="cards--container">
+              <div className="image-dr"></div>
+              <h5>How drones can help manage the world's food supply</h5>
+              <button className="btn">Read more...</button>
+            </div>
+            <span className="vr" />
+            <div className="cards--container">
+              <div className="image-sw"></div>
+              <h5>Smart watches-wrists that talk</h5>
+              <button className="btn">Read more...</button>
+            </div>
+          </div>
+
+          {/* <PostList posts={posts} /> */}
           <div className="btn-create">
             <Link to="/create">
               <i className="material-icons" onClick={this.handleClick}>

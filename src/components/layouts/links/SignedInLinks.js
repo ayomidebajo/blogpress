@@ -13,22 +13,22 @@ const SignedInLinks = props => {
       </Link>
       <li>
         <NavLink className="signin--links" to="/tech">
-          Tech
+          TECH
         </NavLink>
       </li>
       <li>
         <NavLink className="signin--links" to="/health">
-          Health
+          HEALTH
         </NavLink>
       </li>
       <li>
         <NavLink className="signin--links" to="/fashion">
-          Fashion
+          FASHION
         </NavLink>
       </li>
       <li>
         <NavLink className="signin--links" to="/world">
-          World
+          WORLD
         </NavLink>
       </li>
       <li>
