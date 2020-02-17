@@ -16,20 +16,13 @@ class Dashboard extends Component {
     return (
       <div className="container">
         <div className="dashboard-container">
-          <div className="row">
-            <div className="col s12 m6">
-              <PostList posts={posts} />
-              <div className="btn-create">
-                <Link to="/create">
-                  <i
-                    className="large material-icons"
-                    onClick={this.handleClick}
-                  >
-                    mode_edit
-                  </i>
-                </Link>
-              </div>
-            </div>
+          <PostList posts={posts} />
+          <div className="btn-create">
+            <Link to="/create">
+              <i className="material-icons" onClick={this.handleClick}>
+                mode_edit
+              </i>
+            </Link>
           </div>
         </div>
       </div>

@@ -42,9 +42,15 @@
   }
 }
 
-.blog--card__container {
-  display: grid;
-  grid-gap: 2em;
-  grid-template-columns: repeat(3, 1fr);
-  margin: auto;
+.dashboard-container {
+  display: flex;
+  .blog--card__container {
+    display: grid;
+    grid-gap: 2em;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+  }
+
 }
+
+
