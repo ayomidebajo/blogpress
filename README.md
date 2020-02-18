@@ -1,4 +1,4 @@
-This is project was built using React, SASS  and Firebase for authentication.
+This is project was built using React, Redux, SASS  and Firebase for authentication.
 
 ## Available Scripts
 
