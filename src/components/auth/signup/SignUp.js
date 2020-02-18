@@ -66,7 +66,7 @@ class SignUp extends Component {
                 />
               </div>
               <div className="input-field">
-                <button className="btn btn--black">Sign up</button>
+                <button className="btn--black">Sign up</button>
                 {authError ? <p>{authError}</p> : null}
               </div>
             </form>

@@ -54,7 +54,7 @@ class SignIn extends Component {
                   onChange={this.handleChange}
                 />
               </div>
-              <button className="btn btn--black">Log in</button>
+              <button className="btn--black">Log in</button>
             </form>
             {/*to check for login failed */}
             <div className="input-field">
