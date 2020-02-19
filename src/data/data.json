@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "title": "How I landed a fullstack job without a degree",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis illum dolorum, eveniet nemo rem porro aperiam accusamus magni asperiores ad harum ipsam neque, earum laboriosam velit explicabo omnis odit debitis?",
+    "date": "14-02-2020",
+    "tags": "Fashion"
+  },
+  {
+    "id": "2",
+    "title": "How drones can help manage the world's food supply",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis illum dolorum, eveniet nemo rem porro aperiam accusamus magni asperiores ad harum ipsam neque, earum laboriosam velit explicabo omnis odit debitis?",
+    "date": "17-01-2020",
+    "tags": "Health"
+  },
+  {
+    "id": "3",
+    "title": "Smart watches-wrists that talk",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis illum dolorum, eveniet nemo rem porro aperiam accusamus magni asperiores ad harum ipsam neque, earum laboriosam velit explicabo omnis odit debitis?",
+    "date": "19-01-2020",
+    "tags": "Tech"
+  }
+]

@@ -54,5 +54,15 @@ a {
   // height: 100%;
   @include for-desktop-up {
     width: 80%;
+    margin: auto;
   }
+}
+
+.blog--post__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.blog--post{
+  display: block;
 }

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import PostList from "../posts/PostList";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { firestoreConnect } from "react-redux-firebase";
@@ -35,23 +34,23 @@ class Dashboard extends Component {
             <div className="cards--container">
               <div className="image-de"></div>
               <h5> How I landed a fullstack job without a degree</h5>
-              <button className="btn">Read more...</button>
+              <Link to="/tech"><button className="btn">Read more...</button></Link>
             </div>
             <span className="vr" />
             <div className="cards--container">
               <div className="image-dr"></div>
               <h5>How drones can help manage the world's food supply</h5>
-              <button className="btn">Read more...</button>
+              <Link to="/tech"><button className="btn">Read more...</button></Link>
             </div>
             <span className="vr" />
             <div className="cards--container">
               <div className="image-sw"></div>
               <h5>Smart watches-wrists that talk</h5>
-              <button className="btn">Read more...</button>
+              <Link to="/tech"><button className="btn">Read more...</button></Link>
             </div>
           </div>
 
-          {/* <PostList posts={posts} /> */}
+         
           <div className="btn-create">
             <Link to="/create">
               <i className="material-icons" onClick={this.handleClick}>
