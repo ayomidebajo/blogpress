@@ -1,14 +1,15 @@
 import React from "react";
 import PostSummary from "./PostSummary";
-import PostData from "../../data/data.json";
+// import PostData from "../../data/data.json";
 // import { Link } from "react-router-dom";
+// import Post from '../../store/reducers/postReducer';
 
 //lists of posts
-const PostList = () => {
+const PostList = ({posts}) => {
   return (
     <div className="container">
       <div className="blog--post__container">
-        {PostData.map(post => {
+        {posts && posts.map(post => {
           return (
             <div className="projects-section">
               <span className="project--card">

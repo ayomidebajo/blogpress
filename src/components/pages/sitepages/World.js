@@ -1,13 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Logo from "../../../logo.svg";
-
+import Navbar from "../../layouts/navbar/Navbar";
 function World() {
   return (
     <div>
-      <Link to="/" className="brand-logo">
-        <img src={Logo} alt="logo" />
-      </Link>
+      <Navbar />
       <p>hello fom world</p>
     </div>
   );

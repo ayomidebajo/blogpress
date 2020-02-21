@@ -5,6 +5,7 @@ import Health from "./components/pages/sitepages/Health";
 import Tech from "./components/pages/sitepages/Tech";
 import World from "./components/pages/sitepages/World";
 import Home from "./components/layouts/Home";
+import Navbar from './components/layouts/navbar/Navbar';
 import PostDetails from "./components/posts/PostDetails";
 import PostSummary from "./components/posts/PostSummary";
 import Post from "./components/posts/Post";
@@ -16,6 +17,7 @@ export class App extends Component {
   render() {
     return (
       <BrowserRouter>
+      {/* <Navbar /> */}
         <Switch>
           <Route path="/home" component={Home} />
           <Route path="/post/:id" component={PostSummary} />

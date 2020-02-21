@@ -1,14 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import PostList from "../../posts/PostList";
-import Logo from "../../../logo.svg";
+import Navbar from "../../layouts/navbar/Navbar";
 
 const Tech = ({ posts }) => {
   return (
     <div>
-      <Link to="/" className="brand-logo">
-        <img src={Logo} alt="logo" />
-      </Link>
+      <Navbar />
       <PostList posts={posts} />
     </div>
   );

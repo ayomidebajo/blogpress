@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PostList from '../posts/PostList';
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { firestoreConnect } from "react-redux-firebase";
@@ -50,7 +51,7 @@ class Dashboard extends Component {
             </div>
           </div>
 
-         
+         <PostList post={posts} />
           <div className="btn-create">
             <Link to="/create">
               <i className="material-icons" onClick={this.handleClick}>
