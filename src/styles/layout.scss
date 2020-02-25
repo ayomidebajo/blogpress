@@ -9,6 +9,13 @@
 @import "./createpost";
 @import "./posts.scss";
 @import "./base";
+@import "./fashion";
+@import "./health";
+
+body {
+  font-family: Tenor Sans;
+  margin: 0;
+}
 
 $colors: (
   primary: #000000,

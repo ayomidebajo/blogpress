@@ -5,7 +5,25 @@ function Health() {
   return (
     <div>
       <Navbar />
-      <p>hello from health</p>
+
+      <div className="health">
+        <h2>These Purifying plants will make you sleep better</h2>
+        <div className="health--container">
+          <div className="container">
+            <div className="health-image-1"></div>
+            <div className="health-image-2"></div>
+            <div className="health-image-3"></div>
+            <div className="health-image-4"></div>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://dailyhealthpost.com/put-these-10-air-purifying-plants-next-to-your-bed-for-better-sleep/?utm_source=link&utm_medium=fb&utm_campaign=sq&utm_content=dhp&fbclid=IwAR1NuIfA06AqN4Z6a080doVWprNgD7mLHmjj2qDeUh7pu79X1jWhlYyi8m4"
+            >
+              <button className="btn">See more</button>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

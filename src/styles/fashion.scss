@@ -1,0 +1,27 @@
+.fashion--container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.fashion--image-1 {
+  background: url(../img/purple.jpg) no-repeat;
+  width: 100%;
+  height: 1000px;
+  margin-bottom: 20px;
+}
+.fashion--image-2 {
+  background: url(../img/ayshow.jpg) no-repeat;
+  width: 100%;
+  height: 1000px;
+}
+
+.title {
+  margin-left: 10rem;
+}
+
+h2 {
+  font-family: Tenor Sans;
+}
+p {
+  font-family: Tenor Sans;
+}
