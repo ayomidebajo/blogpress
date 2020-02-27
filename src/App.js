@@ -11,6 +11,7 @@ import PostSummary from "./components/posts/PostSummary";
 import Post from "./components/posts/Post";
 import SignIn from "./components/auth/login/SignIn";
 import SignUp from "./components/auth/signup/SignUp";
+import Footer from "./components/layouts/footer/Footer";
 
 import "./styles/layout.scss";
 export class App extends Component {
@@ -30,6 +31,7 @@ export class App extends Component {
           <Route exact path="/" component={SignIn} />
           <Route path="/signup" component={SignUp} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     );
   }

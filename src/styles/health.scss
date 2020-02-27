@@ -1,27 +1,28 @@
 .health--container {
-  display: flex;
-//   grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em;
+  padding: 0;
+  margin: 0;
 }
 .health-image-1 {
   background: url(../img/jasmine.jpg) no-repeat;
-  width: 500px;
+  width: 100%;
   height: 300px;
-//   margin-bottom: 20px;
+  
 }
 .health-image-2 {
   background: url(../img/lavender.jpg) no-repeat;
-  width: 500px;
+  width: 100%;
   height: 300px;
-//   margin-bottom: 20px;
 }
 .health-image-3 {
   background: url(../img/snakeplant.jpg) no-repeat;
-  width: 500px;
+  width: 100%;
   height: 300px;
-//   margin-bottom: 20px;
 }
 .health-image-4 {
   background: url(../img/aloevera.jpg) no-repeat;
-  width: 500px;
+  width: 100%;
   height: 300px;
 }
