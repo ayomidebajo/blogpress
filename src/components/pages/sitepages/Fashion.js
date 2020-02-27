@@ -6,7 +6,7 @@ function Fashion() {
     <div>
       <Navbar />
       <div className="fashion">
-        <div className="title">
+        <div className="fashion-title">
           <h2>Latest Asoebi Styles</h2>
           <p>
             Are you attending a wedding soon? Get inspiration from this styles!

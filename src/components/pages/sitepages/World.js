@@ -14,7 +14,7 @@ function World() {
               target="_blank"
               href="https://www.wri.org/blog/2020/02/greenhouse-gas-emissions-by-country-sector"
             >
-              <h3 className="title">
+              <h3 className="world-title">
                 4 Charts Explain Greenhouse Gas Emissions by Countries and
                 Sectors
               </h3>
