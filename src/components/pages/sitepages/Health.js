@@ -6,9 +6,8 @@ function Health() {
     <div>
       <Navbar />
 
-      {/* <div className="health"> */}
-      <h2>These Purifying plants will make you sleep better</h2>
       <div className="container">
+        <h2 className="health-h2">These Purifying plants will make you sleep better</h2>
         <div className="health--container">
           <div>
             <div className="health-image-1"></div>
@@ -38,7 +37,6 @@ function Health() {
         </div>
       </div>
     </div>
-    // {/* </div> */}
   );
 }
 
