@@ -1,0 +1,13 @@
+.tech--h2 {
+  margin-top: 5em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+.span {
+    font-weight: bold;
+    color: rgb(160, 113, 121);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
