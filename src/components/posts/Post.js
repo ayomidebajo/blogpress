@@ -7,57 +7,73 @@ import { Link } from "react-router-dom";
 import Logo from "../../logo.svg";
 import { createPost } from "../../store/actions/PostActions";
 import { connect } from "react-redux";
+import { EDITOR_JS_TOOLS } from "../../constants/ConstantsEditor";
+import ScrollArea from "react-scrollbar";
+import Footer from "../layouts/footer/Footer";
 
 class Post extends Component {
   state = {
-    content: ""
+    content: {},
   };
   // componentDidMount() {
   //   this.editor; // access editor-js
   // }
 
-  onChange = e => {
+  onChange = (e) => {
     this.setState({ content: e });
   };
-  handleSubmit = e => {
+  handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("submit", this.state);
-    // const savedData = await this.editor.save();
+    console.log("submited stuff", this.state.content);
 
-    this.props.createPost(this.state);
+    console.log(this.editor, "Saved data from editor js");
   };
+
   render() {
+    // const ref = React.useRef(null);
+    // const
     return (
-      <div className="container">
-        <div className="editor--container">
-          <Link to="/home">
-            <img src={Logo} alt="logo" />
-          </Link>
-          {/* <link to="/home"> */}
-          <button onClick={this.handleSubmit} className="editor-btn">
-            Publish
-          </button>
-          {/* </link> */}
-          <Editor
-            className="editor"
-            ref={r => (this.editor = r)}
-            id="editor post"
-            placeholder="Write an awesome story!"
-            tools={{
-              header: Header,
-              list: List
-            }}
-            onData={this.onChange}
-            onChange={this.onChange}
-            onReady={() => console.log("Start!")}
-            data={{
-              time: 1569611146631,
-              blocks: [],
-              version: "2.15.0"
-            }}
-          ></Editor>
+      <>
+        <div className="container">
+          <div className="editor--container">
+            <Link to="/home">
+              <img src={Logo} alt="logo" />
+            </Link>
+            {/* <link to="/home"> */}
+            <button onClick={this.handleSubmit} className="editor-btn">
+              Publish
+            </button>
+            {/* </link> */}
+            <ScrollArea
+              speed={0.8}
+              className="area"
+              contentClassName="content"
+              horizontal={false}
+            >
+              <Editor
+                contenteditable
+                className="editor"
+                ref={(r) => (this.editor = r)}
+                id="editor post"
+                placeholder="Write an awesome story!"
+                tools={EDITOR_JS_TOOLS}
+                onData={(data) =>
+                  this.setState(
+                    {
+                      content: data,
+                    },
+                    console.log(this.state.content, "we are doing this bitch!")
+                  )
+                }
+                onChange={this.onChange}
+                onReady={() => console.log("Start!")}
+                data={this.state.content}
+              />
+            </ScrollArea>
+          </div>
         </div>
-      </div>
+        <Footer />
+      </>
     );
   }
 }
@@ -85,9 +101,9 @@ class Post extends Component {
             } */
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    createPost: post => dispatch(createPost(post))
+    createPost: (post) => dispatch(createPost(post)),
   };
 };
 

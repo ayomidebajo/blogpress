@@ -10,7 +10,7 @@ class Home extends Component {
         <Navbar />
         <div className="db__main">{this.props.children}</div>
         <Dashboard />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     );
   }

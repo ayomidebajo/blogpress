@@ -31,12 +31,19 @@
 }
 
 .editor-btn {
-  border: 1px solid #000000;
-  background: rgb(73, 160, 73);
-  width: 300px;
+  border: 1px solid#d61d4e;
+  background: #d61d4e;
+  width: 200px;
   height: 50px;
+  border-radius: 05px;
   color: #ffffff;
   margin-left: 100vh;
+
+  &:hover {
+    background-color: white;
+    color: #d61d4e;
+    cursor: pointer;
+  }
 }
 
 .btn-create {
@@ -55,7 +62,8 @@
   color: black;
   width: 180px;
   height: 50px;
-  border: 1px solid #ffffff;
+  border: 1px solid #000000;
+  transition: 0.5s;
   font-family: Tenor Sans;
   font-size: 20px;
 
