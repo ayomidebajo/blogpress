@@ -22,10 +22,11 @@ class Post extends Component {
   onChange = (e) => {
     this.setState({ content: e });
   };
-  handleSubmit = async (e) => {
+  handleSubmit = (e) => {
     e.preventDefault();
     console.log("submited stuff", this.state.content);
 
+    this.props.createPost(this.state.content);
     console.log(this.editor, "Saved data from editor js");
   };
 
@@ -76,29 +77,6 @@ class Post extends Component {
       </>
     );
   }
-}
-
-// {
-//   type: "linkTool",
-//   data: {
-//     link: "https://www.youtube.com/watch?v=OK6akGZCC88",
-//     meta: {
-//       title: "",
-//       site_name: "",
-//       description: "",
-//       image: {
-//         url: ""
-//       }
-//     }
-//   }
-// }
-{
-  /* linkTool: {
-              class: LinkTool,
-              config: {
-                endpoint: "http://localhost:3000/"
-              }
-            } */
 }
 
 const mapDispatchToProps = (dispatch) => {
