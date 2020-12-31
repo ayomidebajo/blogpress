@@ -56,7 +56,7 @@ class Post extends Component {
                 className="editor"
                 ref={(r) => (this.editor = r)}
                 id="editor post"
-                placeholder="Write an awesome story!"
+                placeholder="You are awesome!"
                 tools={EDITOR_JS_TOOLS}
                 onData={(data) =>
                   this.setState(
