@@ -15,7 +15,7 @@ export const createPost = (post) => {
     firestore
       .collection("posts")
       .add({
-        post,
+        ...post,
         // authorFirstName: profile.firstName,
         // authorLastName: profile.lastName,
         authorId: firebase.auth.uid,

@@ -1,3 +1,5 @@
+@import "./mixins";
+
 .login--container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -54,4 +56,24 @@
   text-decoration: none;
   color: #a33152;
   font-weight: bold;
+}
+
+@include for-phone-only {
+  .login--container {
+    grid-template-columns: 1fr;
+    width: 100vw;
+  }
+
+  .landing--container {
+    display: none;
+  }
+
+  .form__container {
+    width: inherit;
+    padding: 10px;
+  }
+  .left__side--bar {
+    width: 100%;
+    padding: 10px;
+  }
 }

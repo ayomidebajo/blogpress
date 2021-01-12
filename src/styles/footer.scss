@@ -19,3 +19,9 @@
 .footer-copyright {
   color: white;
 }
+
+@include for-phone-only {
+  .footer--container {
+    position: fixed;
+  }
+}

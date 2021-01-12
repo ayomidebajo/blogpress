@@ -1,4 +1,4 @@
-export const signIn = credentials => {
+export const signIn = (credentials) => {
   return (dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
 
@@ -8,7 +8,7 @@ export const signIn = credentials => {
       .then(() => {
         dispatch({ type: "LOGIN_SUCCESS" });
       })
-      .catch(err => {
+      .catch((err) => {
         dispatch({ type: "LOGIN_ERROR", err });
       });
   };
@@ -27,7 +27,8 @@ export const signOut = () => {
   };
 };
 
-export const signUp = newUser => {
+export const signUp = (newUser) => {
+  console.log(newUser, "checking new user");
   return (dispatch, getState, { getFirebase, getFirestore }) => {
     const firebase = getFirebase();
     const firestore = getFirestore();
@@ -35,19 +36,16 @@ export const signUp = newUser => {
     firebase
       .auth()
       .createUserWithEmailAndPassword(newUser.email, newUser.password)
-      .then(resp => {
-        return firestore
-          .collection("users")
-          .doc(resp.user.uid)
-          .set({
-            firstname: newUser.firstName,
-            lastname: newUser.lastName
-          });
-      })
+      .then((resp) => {
+        return firestore.collection("users").doc(resp.user.uid).set({
+          firstname: newUser.first_name,
+          lastname: newUser.last_name,
+        });
+      }, console.log(newUser.first_name[0] + newUser.last_name[0], "Checking something!"))
       .then(() => {
         dispatch({ type: "SIGNUP_SUCCESS" });
       })
-      .catch(err => {
+      .catch((err) => {
         dispatch({ type: "SIGNUP_ERROR", err });
       });
   };
@@ -61,7 +59,7 @@ export const upDate = () => {
     user
       .updateProfile({
         displayName: "",
-        photoURL: ""
+        photoURL: "",
       })
       .then(() => {
         dispatch({ type: "Update Successful" });

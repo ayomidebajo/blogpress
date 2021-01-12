@@ -9,8 +9,8 @@ import Footer from "../../layouts/footer/Footer";
 
 class SignUp extends Component {
   state = {
-    firstname: "",
-    lastname: "",
+    first_name: "",
+    last_name: "",
     email: "",
     password: "",
   };
@@ -47,12 +47,20 @@ class SignUp extends Component {
               <form onSubmit={this.handleSubmit} className="form--content">
                 <h3 className="form-title">Sign up</h3>
                 <div className="name">
-                  <label htmlFor="name">Your first name</label>
-                  <input type="text" id="name" onChange={this.handleChange} />
+                  <label htmlFor="first_name">Your first name</label>
+                  <input
+                    type="text"
+                    id="first_name"
+                    onChange={this.handleChange}
+                  />
                 </div>
                 <div className="name">
-                  <label htmlFor="name">Your last name</label>
-                  <input type="text" id="name" onChange={this.handleChange} />
+                  <label htmlFor="last_name">Your last name</label>
+                  <input
+                    type="text"
+                    id="last_name"
+                    onChange={this.handleChange}
+                  />
                 </div>
 
                 <div className="email">
