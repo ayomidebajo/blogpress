@@ -32,7 +32,7 @@ class SignUp extends Component {
         <div className="login--container">
           {/* there should be an if statement for the routing of the logo (blogpress) */}
           <aside className="left__side--bar">
-            <header className="signin--header">
+            <header className="signup--header">
               <Link to="!#" className="logo">
                 <img src={Logo} alt="logo" />
               </Link>
@@ -43,7 +43,7 @@ class SignUp extends Component {
                 </Link>
               </p>
             </header>
-            <div className="form__container">
+            <div className="form__container--signup">
               <form onSubmit={this.handleSubmit} className="form--content">
                 <h3 className="form-title">Sign up</h3>
                 <div className="name">

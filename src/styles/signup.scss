@@ -51,3 +51,37 @@
 //   color: #a33152;
 //   font-weight: bold;
 // }
+
+.form__container--signup {
+  width: 344px;
+  margin-top: 15vh;
+
+  & label {
+    display: block;
+    margin-top: 2em;
+  }
+
+  & input {
+    border: none;
+    border-bottom: 1px solid #000000;
+    margin-top: 1em;
+    outline: none;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .form-title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+
+    letter-spacing: 0.01em;
+  }
+}
+
+@include for-phone-only {
+  .form__container--signup {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
