@@ -1,5 +1,3 @@
-
-
 .landing--right__container {
   background: linear-gradient(
       0deg,
@@ -31,9 +29,15 @@
     border-left: 2px solid #ffffff;
     padding-left: 10px;
   }
+}
+.landing--right--text__container {
+  width: 500px;
+  margin: auto;
+}
 
+@include for-tablet-portait-only {
   .landing--right--text__container {
-    width: 500px;
-    margin: auto;
+    width: auto;
+    padding: 20px;
   }
 }

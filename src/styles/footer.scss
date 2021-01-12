@@ -25,3 +25,10 @@
     position: fixed;
   }
 }
+
+@include for-tablet-portait-only {
+  .footer--container {
+    width: 100vw;
+    position: fixed;
+  }
+}
