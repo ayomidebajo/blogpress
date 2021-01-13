@@ -22,13 +22,13 @@
 
 @include for-phone-only {
   .footer--container {
-    position: fixed;
+    position: relative;
   }
 }
 
 @include for-tablet-portait-only {
   .footer--container {
     width: 100vw;
-    position: fixed;
+    position: relative;
   }
 }
