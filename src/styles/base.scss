@@ -42,27 +42,11 @@ a {
   transition: ease-in-out 0.2s;
 }
 
-.container {
-  margin-right: auto;
-  margin-left: auto;
-  /* for edge cases: */
-  width: 100%;
-  max-width: 100%;
-
-  padding-right: 15px;
-  padding-left: 15px;
-  // height: 100%;
-  @include for-desktop-up {
-    width: 80%;
-    margin: auto;
-  }
-}
-
 .blog--post__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.blog--post{
+.blog--post {
   display: block;
 }

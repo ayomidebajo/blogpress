@@ -1,5 +1,6 @@
 .dashboard-container {
   // display: flex;
+  height: 100vh;
   & h3 {
     font-family: Tenor Sans;
     margin: 10px 0 30px 0;
@@ -61,5 +62,47 @@
         background: url(../img/RectangleWS.png);
       }
     }
+  }
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  /* for edge cases: */
+  width: 100%;
+  max-width: 100%;
+
+  padding-right: 15px;
+  padding-left: 15px;
+  // height: 100%;
+  @include for-desktop-up {
+    width: 80%;
+    margin: auto;
+  }
+  // @include for-phone-only {
+  // }
+}
+
+@include for-phone-only {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .dashboard-container .featured--container {
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: auto;
+  }
+
+  .dashboard-container .featured--container .fashion-container {
+    width: 340px;
+  }
+
+  .dashboard-container .featured--container .health-container {
+    width: 340px;
+  }
+
+  .dashboard-container .latest--container {
+    display: block;
   }
 }
