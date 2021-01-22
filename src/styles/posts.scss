@@ -2,6 +2,13 @@
   color: black;
 }
 
+.editor-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
 .projects-section {
   height: 50vh;
   width: 100%;
@@ -18,8 +25,8 @@
   .title {
     margin-left: 0;
     width: 100%;
-   font-size: 20px;
-   font-weight: bolder;
+    font-size: 20px;
+    font-weight: bolder;
   }
   .content {
     margin-left: 5px;
@@ -37,11 +44,6 @@
       background: black;
       color: white;
       cursor: pointer;
-     
     }
   }
 }
-
-
-
-

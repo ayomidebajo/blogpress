@@ -66,13 +66,13 @@ class Dashboard extends Component {
           </div>
 
           <PostList post={posts} />
-          <div className="btn-create">
-            <Link to="/create">
-              <i className="material-icons" onClick={this.handleClick}>
-                mode_edit
-              </i>
-            </Link>
-          </div>
+        </div>
+        <div className="btn-create">
+          <Link to="/create">
+            <i className="material-icons" onClick={this.handleClick}>
+              mode_edit
+            </i>
+          </Link>
         </div>
       </div>
     );

@@ -37,13 +37,15 @@ class Post extends Component {
       <>
         <div className="container">
           <div className="editor--container">
-            <Link to="/home">
-              <img src={Logo} alt="logo" />
-            </Link>
-            {/* <link to="/home"> */}
-            <button onClick={this.handleSubmit} className="editor-btn">
-              Publish
-            </button>
+            <div className="editor-nav">
+              <Link to="/home">
+                <img src={Logo} alt="logo" />
+              </Link>
+              {/* <link to="/home"> */}
+              <button onClick={this.handleSubmit} className="editor-btn">
+                Publish
+              </button>
+            </div>
             {/* </link> */}
             <ScrollArea
               speed={0.8}
