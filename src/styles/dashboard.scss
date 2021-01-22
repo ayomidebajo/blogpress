@@ -1,6 +1,8 @@
 .dashboard-container {
   // display: flex;
-  height: 100vh;
+  height: 100%;
+  margin: 75px auto;
+  width: 70%;
   & h3 {
     font-family: Tenor Sans;
     margin: 10px 0 30px 0;
@@ -8,19 +10,26 @@
   }
 
   .featured--container {
+    width: 94%;
     display: grid;
-    grid-gap: 2em;
     grid-template-columns: repeat(2, 1fr);
+    height: 300px;
+    /* margin: auto; */
+    gap: 2em;
 
     .fashion-container {
-      background: url(../img/RectangleF.png);
-      width: 604px;
-      height: 300px;
+      background: url(../img/RectangleF.png) no-repeat;
+
+      -webkit-box-shadow: 0 2px 4px 0 rgba(183, 192, 206, 0.4);
+      -moz-box-shadow: 0 2px 4px 0 rgba(183, 192, 206, 0.4);
+      box-shadow: 0 2px 4px 0 rgba(183, 192, 206, 0.4);
     }
     .health-container {
-      background: url(../img/RectangleH.png);
-      width: 604px;
-      height: 300px;
+      background: url(../img/RectangleH.png) no-repeat;
+
+      -webkit-box-shadow: 0 2px 4px 0 rgba(183, 192, 206, 0.4);
+      -moz-box-shadow: 0 2px 4px 0 rgba(183, 192, 206, 0.4);
+      box-shadow: 0 2px 4px 0 rgba(183, 192, 206, 0.4);
     }
   }
   .blog--card__container {
@@ -32,37 +41,45 @@
   .hr {
     margin: 50px 0 40px 0;
     border-bottom: 1px solid rgb(92, 89, 89);
+    width: 94%;
   }
 
   .vr {
-    border-left: 1px solid rgb(92, 89, 89);
+    border: 1px solid #5c5959;
     margin: 0 10px 0 10px;
+    height: inherit;
   }
   .latest--container {
     display: flex;
+    justify-content: space-between;
+    width: 94%;
 
     .cards--container {
       background: white;
-      width: 390px;
+      width: min-content;
       height: 300px;
 
       .image-de {
         width: 390px;
         height: 300px;
-        background: url(../img/RectangleDe.png);
+        background: url(../img/RectangleDe.png) no-repeat;
       }
       .image-dr {
         width: 390px;
         height: 300px;
-        background: url(../img/RectangleDr.png);
+        background: url(../img/RectangleDr.png) no-repeat;
       }
       .image-sw {
         width: 390px;
         height: 300px;
-        background: url(../img/RectangleWS.png);
+        background: url(../img/RectangleWS.png) no-repeat;
       }
     }
   }
+}
+
+.image-and-stroke {
+  display: flex;
 }
 
 .container {
@@ -76,7 +93,7 @@
   padding-left: 15px;
   // height: 100%;
   @include for-desktop-up {
-    width: 80%;
+    // width: 100%;
     margin: auto;
   }
   // @include for-phone-only {

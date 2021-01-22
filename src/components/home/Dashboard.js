@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PostList from '../posts/PostList';
+import PostList from "../posts/PostList";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { firestoreConnect } from "react-redux-firebase";
@@ -33,25 +33,39 @@ class Dashboard extends Component {
           <h3>Latest from Tech</h3>
           <div className="latest--container">
             <div className="cards--container">
-              <div className="image-de"></div>
+              <div className="image-and-stroke">
+                <div className="image-de"></div>
+                <div className="vr"> </div>
+              </div>
               <h5> How I landed a fullstack job without a degree</h5>
-              <Link to="/tech"><button className="btn">Read more...</button></Link>
+              <Link to="/tech">
+                <button className="btn">Read more...</button>
+              </Link>
             </div>
-            <span className="vr" />
+
             <div className="cards--container">
-              <div className="image-dr"></div>
+              <div className="image-and-stroke">
+                <div className="image-dr"></div>
+                <div className="vr"></div>
+              </div>
               <h5>How drones can help manage the world's food supply</h5>
-              <Link to="/tech"><button className="btn">Read more...</button></Link>
+              <Link to="/tech">
+                <button className="btn">Read more...</button>
+              </Link>
             </div>
-            <span className="vr" />
+
             <div className="cards--container">
-              <div className="image-sw"></div>
+              <div className="image-and-stroke">
+                <div className="image-sw"></div>
+              </div>
               <h5>Smart watches-wrists that talk</h5>
-              <Link to="/tech"><button className="btn">Read more...</button></Link>
+              <Link to="/tech">
+                <button className="btn">Read more...</button>
+              </Link>
             </div>
           </div>
 
-         <PostList post={posts} />
+          <PostList post={posts} />
           <div className="btn-create">
             <Link to="/create">
               <i className="material-icons" onClick={this.handleClick}>
@@ -66,12 +80,12 @@ class Dashboard extends Component {
 }
 
 //connecting to the redux store and calling in objects
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   console.log(state);
   return {
     posts: state.post.post,
     // posts: state.firestore.ordered.posts,
-    auth: state.firebase.auth
+    auth: state.firebase.auth,
   };
 };
 export default compose(
