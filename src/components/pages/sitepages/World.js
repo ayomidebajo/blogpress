@@ -32,7 +32,7 @@ function World() {
               <button className="btn--black">Read more</button>
             </a>
           </div>
-          <p className="content">
+          <p className="content text">
             Climate change is an urgent threat to humanity that demands swift,
             decisive action. Fires. Droughts. Floods. Hurricanes. Rising seas.
             Climate impacts are being felt all around the world and on track to

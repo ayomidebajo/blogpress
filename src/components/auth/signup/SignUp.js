@@ -85,7 +85,7 @@ class SignUp extends Component {
           </aside>
           <Landing />
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </>
     );
   }

@@ -35,33 +35,37 @@ class Dashboard extends Component {
             <div className="cards--container">
               <div className="image-and-stroke">
                 <div className="image-de"></div>
-                <div className="vr"> </div>
               </div>
-              <h5> How I landed a fullstack job without a degree</h5>
-              <Link to="/tech">
-                <button className="btn">Read more...</button>
-              </Link>
+              <div className="card-content">
+                <h5> How I landed a fullstack job without a degree</h5>
+                <Link to="/tech">
+                  <button className="btn">Read more...</button>
+                </Link>
+              </div>
             </div>
 
             <div className="cards--container">
               <div className="image-and-stroke">
                 <div className="image-dr"></div>
-                <div className="vr"></div>
               </div>
-              <h5>How drones can help manage the world's food supply</h5>
-              <Link to="/tech">
-                <button className="btn">Read more...</button>
-              </Link>
+              <div className="card-content">
+                <h5>How drones can help manage the world's food supply</h5>
+                <Link to="/tech">
+                  <button className="btn">Read more...</button>
+                </Link>
+              </div>
             </div>
 
             <div className="cards--container">
               <div className="image-and-stroke">
                 <div className="image-sw"></div>
               </div>
-              <h5>Smart watches-wrists that talk</h5>
-              <Link to="/tech">
-                <button className="btn">Read more...</button>
-              </Link>
+              <div className="card-content">
+                <h5>Smart watches-wrists that talk</h5>
+                <Link to="/tech">
+                  <button className="btn">Read more...</button>
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -69,9 +73,7 @@ class Dashboard extends Component {
         </div>
         <div className="btn-create">
           <Link to="/create">
-            <i className="material-icons" onClick={this.handleClick}>
-              mode_edit
-            </i>
+            <i class="fas fa-pen" onClick={this.handleClick}></i>
           </Link>
         </div>
       </div>

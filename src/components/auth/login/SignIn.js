@@ -69,7 +69,7 @@ class SignIn extends Component {
           </aside>
           <Landing />
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </>
     );
   }

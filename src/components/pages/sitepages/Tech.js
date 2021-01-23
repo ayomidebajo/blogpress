@@ -3,6 +3,7 @@ import Navbar from "../../layouts/navbar/Navbar";
 import Fullstack from "../../../img/RectangleDe.png";
 import Drone from "../../../img/RectangleDr.png";
 import Watch from "../../../img/RectangleWS.png";
+import Footer from "../../layouts/footer/Footer";
 
 const Tech = () => {
   return (
@@ -12,11 +13,9 @@ const Tech = () => {
       <div className="container">
         <div className="tech--container">
           <div className="fullstack--box">
-            <h2 className="tech--h2">
-              How I landed a fullstack job without a degree
-            </h2>
+            <h4>How I landed a fullstack job without a degree</h4>
             <img src={Fullstack} alt="codes on computer" width="40%" />
-            <p>
+            <p className="text">
               Six months ago, I got my first developer job as full stack web
               developer for a startup. I had no relevant work experience, no
               tech degree, and not even a year of active coding experience. And
@@ -33,11 +32,9 @@ const Tech = () => {
             </a>
           </div>
           <div className="drone--box">
-            <h2 className="tech--h2">
-              How drones can help manage the world's food supply
-            </h2>
+            <h4>How drones can help manage the world's food supply</h4>
             <img src={Drone} alt="A drone" width="40%" />
-            <p>
+            <p className="text">
               Precision agriculture, using GPS, GNSS and drones, maximizes the
               farm yield and helps the farmer to determine which crop is most
               suited as per the soil quality and geological conditions. The use
@@ -53,15 +50,19 @@ const Tech = () => {
             </a>
           </div>
           <div className="watch--box">
-            <h2 className="tech--h2">Smart watches-wrists that talk</h2>
+            <h4>Smart watches-wrists that talk</h4>
             <img src={Watch} alt="A smart watch" width="40%" />
-            <p>
-              The technology, <a href="http://fingerio.cs.washington.edu/"><span className="span">FingerIO</span></a>, tracks fine-grained finger movements by
-              turning a smartphone or smartwatch into an active sonar system
-              using the device’s own microphones and speakers. Because sound
-              waves travel through fabric and do not require a line of sight,
-              users can even interact with a phone inside a pocket or a
-              smartwatch hidden under a sleeve.
+            <p className="text">
+              The technology,{" "}
+              <a href="http://fingerio.cs.washington.edu/">
+                <span className="span">FingerIO</span>
+              </a>
+              , tracks fine-grained finger movements by turning a smartphone or
+              smartwatch into an active sonar system using the device’s own
+              microphones and speakers. Because sound waves travel through
+              fabric and do not require a line of sight, users can even interact
+              with a phone inside a pocket or a smartwatch hidden under a
+              sleeve.
             </p>
             <a
               rel="noopener noreferrer"
@@ -73,6 +74,7 @@ const Tech = () => {
           </div>
         </div>
       </div>
+      {/* <Footer /> */}
     </div>
   );
 };

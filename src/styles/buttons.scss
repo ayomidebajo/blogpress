@@ -1,5 +1,5 @@
 .btn {
-  width: 200px;
+  // width: 200px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -48,8 +48,8 @@
 .btn-create {
   margin-left: 92vw;
   margin-top: 50px;
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -78,4 +78,8 @@
     color: white;
     cursor: pointer;
   }
+}
+
+.fa-pen {
+  font-size: 25px;
 }

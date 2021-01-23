@@ -31,6 +31,7 @@ export class App extends Component {
           <Route exact path="/" component={SignIn} />
           <Route path="/signup" component={SignUp} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     );
   }
