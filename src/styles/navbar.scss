@@ -43,6 +43,10 @@ $colors: (
   & a {
     padding: 0 10px;
   }
+
+  @include for-phone-only {
+    width: 100%;
+  }
 }
 
 .avatar {

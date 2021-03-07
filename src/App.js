@@ -18,7 +18,9 @@ export class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        {/* <Navbar /> */}
+        <Route exact path="/" component={SignIn} />
+        <Route path="/signin" component={SignIn} />
+        <Navbar />
         <Switch>
           <Route path="/home" component={Home} />
           <Route path="/post/:id" component={PostSummary} />
@@ -28,8 +30,6 @@ export class App extends Component {
           <Route path="/tech" component={Tech} />
           <Route path="/world" component={World} />
           <Route path="/fashion" component={Fashion} />
-          <Route exact path="/" component={SignIn} />
-          <Route path="/signup" component={SignUp} />
         </Switch>
         <Footer />
       </BrowserRouter>

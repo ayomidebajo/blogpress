@@ -63,7 +63,7 @@ class Post extends Component {
                 onData={(data) =>
                   this.setState(
                     {
-                      content: data,
+                      content: data.blocks[0].data.text,
                     },
                     console.log(this.state.content, "we are doing this bitch!")
                   )

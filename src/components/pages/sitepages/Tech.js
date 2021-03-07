@@ -8,7 +8,7 @@ import Footer from "../../layouts/footer/Footer";
 const Tech = () => {
   return (
     <div>
-      <Navbar />
+     
 
       <div className="container">
         <div className="tech--container">

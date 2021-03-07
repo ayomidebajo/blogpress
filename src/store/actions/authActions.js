@@ -1,6 +1,9 @@
 export const signIn = (credentials) => {
   return (dispatch, getState, { getFirebase }) => {
     const firebase = getFirebase();
+    console.log(firebase, "checking logins");
+
+    console.log(credentials, "checking credentials");
 
     firebase
       .auth()
@@ -24,6 +27,7 @@ export const signOut = () => {
       .then(() => {
         dispatch({ type: "SIGNOUT_SUCCESS" });
       });
+    // window.location.reload();
   };
 };
 

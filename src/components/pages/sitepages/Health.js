@@ -4,7 +4,7 @@ import Navbar from "../../layouts/navbar/Navbar";
 function Health() {
   return (
     <div>
-      <Navbar />
+  
 
       <div className="container">
         <h2 className="health-h2">

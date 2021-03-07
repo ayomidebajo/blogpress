@@ -7,10 +7,7 @@ class Home extends Component {
   render() {
     return (
       <div className="db__container">
-        <Navbar />
-        <div className="db__main">{this.props.children}</div>
-        <Dashboard />
-        {/* <Footer /> */}
+        <Dashboard />   
       </div>
     );
   }
