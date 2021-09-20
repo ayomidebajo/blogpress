@@ -18,20 +18,19 @@ export class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Route exact path="/" component={SignIn} />
-        <Route path="/signin" component={SignIn} />
-        <Navbar />
         <Switch>
-          <Route path="/home" component={Home} />
+          {/* <Route path="/" component={() => <p>This is landing</p>} /> */}
+          <Route exact path="/" component={Home} />
+          <Route path="/signin" component={SignIn} />
+          <Route path="/signup" component={SignUp} />
+          <Route path="/tech" component={Tech} />
           <Route path="/post/:id" component={PostSummary} />
           <Route path="/create" component={Post} />
           <Route path="/post" component={Post} />
           <Route path="/health" component={Health} />
-          <Route path="/tech" component={Tech} />
           <Route path="/world" component={World} />
           <Route path="/fashion" component={Fashion} />
         </Switch>
-        <Footer />
       </BrowserRouter>
     );
   }

@@ -38,7 +38,7 @@ class SignUp extends Component {
               </Link>
               <p className="member">
                 Already a member?
-                <Link to="/" className="login">
+                <Link to="/signin" className="login">
                   Login
                 </Link>
               </p>

@@ -41,10 +41,14 @@ export const signUp = (newUser) => {
       .auth()
       .createUserWithEmailAndPassword(newUser.email, newUser.password)
       .then((resp) => {
-        return firestore.collection("users").doc(resp.user.uid).set({
-          firstname: newUser.first_name,
-          lastname: newUser.last_name,
-        });
+        return firestore
+          .collection("users")
+          .doc(resp.user.uid)
+          .set({
+            firstname: newUser.first_name,
+            lastname: newUser.last_name,
+            initials: newUser.first_name[0] + newUser.last_name[0],
+          });
       }, console.log(newUser.first_name[0] + newUser.last_name[0], "Checking something!"))
       .then(() => {
         dispatch({ type: "SIGNUP_SUCCESS" });

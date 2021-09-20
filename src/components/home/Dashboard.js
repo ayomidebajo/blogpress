@@ -9,10 +9,10 @@ import { Redirect } from "react-router-dom";
 //dashboard
 class Dashboard extends Component {
   render() {
-    console.log(this.props);
+    console.log(this.props, "uhm dashboard");
     const { posts, auth } = this.props;
 
-    if (!auth.uid) return <Redirect to="/" />;
+    if (!auth.uid) return <Redirect to="/signin" />;
     return (
       <div className="container">
         <div className="dashboard-container">
@@ -31,7 +31,7 @@ class Dashboard extends Component {
           </div>
           <div className="hr"></div>
           <h3>Latest from Tech</h3>
-          <div className="latest--container">
+          {/* <div className="latest--container">
             <div className="cards--container">
               <div className="image-and-stroke">
                 <div className="image-de"></div>
@@ -67,13 +67,13 @@ class Dashboard extends Component {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <PostList post={posts} />
+          <PostList posts={posts} />
         </div>
         <div className="btn-create">
           <Link to="/create">
-            <i class="fas fa-pen" onClick={this.handleClick}></i>
+            <i class="fas fa-pen"></i>
           </Link>
         </div>
       </div>
@@ -83,10 +83,10 @@ class Dashboard extends Component {
 
 //connecting to the redux store and calling in objects
 const mapStateToProps = (state) => {
-  console.log(state);
+  console.log(state.firestore, "wtf");
   return {
-    posts: state.post.post,
-    // posts: state.firestore.ordered.posts,
+    // posts: state.post.post,
+    posts: state.firestore.ordered.posts,
     auth: state.firebase.auth,
   };
 };

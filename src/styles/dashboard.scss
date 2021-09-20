@@ -58,9 +58,9 @@
     height: inherit;
   }
   .latest--container {
-    display: flex;
-    justify-content: space-between;
-    width: 94%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
 
     .image-de {
       width: 390px;
@@ -82,7 +82,8 @@
 
 .cards--container {
   background: white;
-  width: min-content;
+  min-width: 300px;
+  max-width: 100%;
   box-shadow: 0 2px 4px 0 rgba(183, 192, 206, 0.4);
 
   @include for-phone-only {

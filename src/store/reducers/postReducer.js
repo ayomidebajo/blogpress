@@ -37,16 +37,17 @@ const postReducer = (state = iniState, action) => {
   console.log("created post", action);
   switch (action.type) {
     case "ADD_POST":
-     
-      return {
-        ...state,
-        post: action.post,
-      };
+      return state;
     case "ADD_POST_ERROR":
       console.log("create project error", action.err);
       return {
         ...state,
         post: action.err,
+      };
+    case "GET_POSTS":
+      console.log(action.post, "posts");
+      return {
+        ...state,
       };
     default:
       return state;

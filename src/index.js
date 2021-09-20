@@ -2,14 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import * as serviceWorker from "./serviceWorker";
-import { Provider } from "react-redux";
+// import * as serviceWorker from "./serviceWorker";
 import { createStore, applyMiddleware, compose } from "redux";
-import thunk from "redux-thunk";
 import rootReducer from "./store/reducers/rootReducer";
+import { Provider } from "react-redux";
+import fbConfig from "./config/fbConfig";
+import thunk from "redux-thunk";
+// import "firebase/firestore";
+
 import { reduxFirestore, getFirestore } from "redux-firestore";
 import { reactReduxFirebase, getFirebase } from "react-redux-firebase";
-import fbConfig from "./config/fbConfig";
 
 const store = createStore(
   rootReducer,
@@ -31,7 +33,7 @@ store.firebaseAuthIsReady.then(() => {
     </Provider>,
     document.getElementById("root")
   );
-  serviceWorker.unregister();
+  // serviceWorker.unregister();
 });
 
 // If you want your app to work offline and load faster, you can change

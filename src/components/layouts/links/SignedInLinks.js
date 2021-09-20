@@ -5,7 +5,7 @@ import { signOut } from "../../../store/actions/authActions";
 import { Link } from "react-router-dom";
 import Logo from "../../../logo.svg";
 
-const SignedInLinks = props => {
+const SignedInLinks = (props) => {
   return (
     <ul className="signin--container">
       <Link to="/" className="brand-logo">
@@ -32,9 +32,9 @@ const SignedInLinks = props => {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/" className="black-text" onClick={props.signOut}>
+        <Link to="/signin" className="black-text" onClick={props.signOut}>
           Log out
-        </NavLink>
+        </Link>
       </li>
 
       <li>{props.displayName}</li>
@@ -42,9 +42,9 @@ const SignedInLinks = props => {
   );
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
-    signOut: () => dispatch(signOut())
+    signOut: () => dispatch(signOut()),
   };
 };
 

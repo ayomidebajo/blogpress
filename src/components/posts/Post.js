@@ -26,7 +26,7 @@ class Post extends Component {
     e.preventDefault();
     console.log("submited stuff", this.state.content);
 
-    this.props.createPost(this.state.content);
+    // this.props.createPost(this.state.content);
     console.log(this.editor, "Saved data from editor js");
   };
 
