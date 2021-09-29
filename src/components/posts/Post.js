@@ -24,10 +24,21 @@ class Post extends Component {
   };
   handleSubmit = (e) => {
     e.preventDefault();
+
     console.log("submited stuff", this.state.content);
 
-    // this.props.createPost(this.state.content);
-    console.log(this.editor, "Saved data from editor js");
+    let array = [];
+    let element = "";
+    for (const key in this.state.content) {
+      if (Object.hasOwnProperty.call(this.state.content, key)) {
+        element = this.state.content[key];
+        array.push(element);
+      }
+    }
+
+    console.log(array, "array");
+    this.props.createPost(element);
+    // console.log(, "Saved data from editor js");
   };
 
   render() {
@@ -63,7 +74,7 @@ class Post extends Component {
                 onData={(data) =>
                   this.setState(
                     {
-                      content: data.blocks[0].data.text,
+                      content: data.blocks,
                     },
                     console.log(this.state.content, "we are doing this bitch!")
                   )
