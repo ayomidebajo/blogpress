@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Editor from "@stfy/react-editor.js";
+// import Editor from "@stfy/react-editor.js";
 import Header from "@editorjs/header";
 import List from "@editorjs/list";
 // import LinkTool from "@editorjs/link";
@@ -49,7 +49,7 @@ class Post extends Component {
         <div className="container">
           <div className="editor--container">
             <div className="editor-nav">
-              <Link to="/home">
+              <Link to="/">
                 <img src={Logo} alt="logo" />
               </Link>
               {/* <link to="/home"> */}
@@ -58,13 +58,13 @@ class Post extends Component {
               </button>
             </div>
             {/* </link> */}
-            <ScrollArea
+            {/* <ScrollArea
               speed={0.8}
               className="area"
               contentClassName="content"
               horizontal={false}
-            >
-              <Editor
+            > */}
+            {/* <Editor
                 contenteditable
                 className="editor"
                 ref={(r) => (this.editor = r)}
@@ -82,8 +82,8 @@ class Post extends Component {
                 onChange={this.onChange}
                 onReady={() => console.log("Start!")}
                 data={this.state.content}
-              />
-            </ScrollArea>
+              /> */}
+            {/* </ScrollArea> */}
           </div>
         </div>
         <Footer />

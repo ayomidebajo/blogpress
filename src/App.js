@@ -16,6 +16,8 @@ import Footer from "./components/layouts/footer/Footer";
 import "./styles/layout.scss";
 export class App extends Component {
   render() {
+    const { auth, profile } = this.props;
+    console.log(this.props, "props");
     return (
       <BrowserRouter>
         <Switch>
@@ -27,7 +29,7 @@ export class App extends Component {
           <Route path="/create" component={Post} />
           <Route path="/post" component={Post} />
           <Route path="/health" component={Health} />
-          <Route path="/world" component={World} />
+          {/* <Route path="/world" component={World} /> */}
           <Route path="/fashion" component={Fashion} />
         </Switch>
       </BrowserRouter>

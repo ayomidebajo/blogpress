@@ -4,6 +4,10 @@
   margin: 7rem auto;
   width: 70%;
 
+  @include for-tablet-portait-only {
+    width: 100%;
+  }
+
   @include for-phone-only {
     width: 100%;
   }
@@ -40,6 +44,7 @@
     display: grid;
     grid-gap: 2em;
     grid-template-columns: repeat(3, 1fr);
+
     margin: auto;
   }
   .hr {
@@ -87,7 +92,8 @@
   box-shadow: 0 2px 4px 0 rgba(183, 192, 206, 0.4);
 
   @include for-phone-only {
-    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
   }
 }
 

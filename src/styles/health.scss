@@ -5,6 +5,10 @@
   padding: 0;
   margin: auto;
   width: 70%;
+
+  @include for-phone-only {
+    grid-template-columns: 1fr;
+  }
 }
 .health-image-1 {
   background: url(../img/jasmine.jpg) no-repeat;

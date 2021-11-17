@@ -1,11 +1,11 @@
 import React from "react";
+import Footer from "../../layouts/footer/Footer";
 import Navbar from "../../layouts/navbar/Navbar";
 
 function Health() {
   return (
     <div>
-  
-
+      <Navbar />
       <div className="container">
         <h2 className="health-h2">
           These Purifying plants will make you sleep better
@@ -38,6 +38,7 @@ function Health() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

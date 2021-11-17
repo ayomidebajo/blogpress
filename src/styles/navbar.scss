@@ -20,6 +20,27 @@ $colors: (
   top: 0;
 }
 
+.hamburger {
+  background-color: transparent;
+  border: transparent;
+  margin-left: 160px;
+
+  .bar {
+    display: none;
+    width: 25px;
+    height: 3px;
+    border-radius: 2px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #000;
+
+    @include for-phone-only {
+      display: block;
+    }
+  }
+}
+
 .brand-logo {
   margin-top: 10px;
 }
@@ -32,21 +53,44 @@ $colors: (
   width: 80%;
   margin: auto;
 
-  & li:nth-child(2) {
-    margin-left: auto;
-  }
+  // & li:nth-child(2) {
+  //   margin-left: auto;
+  // }
 
-  & li:nth-child(6) {
-    margin-left: auto;
-  }
+  // & li:nth-child(7) {
+  //   margin-left: auto;
+  // }
 
   & a {
     padding: 0 10px;
+    display: flex;
+    justify-content: end;
   }
 
   @include for-phone-only {
+    display: none;
+  }
+}
+
+.nav-signin {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  @include for-phone-only {
+    width: 100%;
+    display: block;
+  }
+  @include for-tablet-portait-only {
     width: 100%;
   }
+}
+
+.active-nav {
+  display: block;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  background-color: white;
 }
 
 .avatar {

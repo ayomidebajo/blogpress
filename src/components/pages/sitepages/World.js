@@ -3,7 +3,7 @@ import Navbar from "../../layouts/navbar/Navbar";
 function World() {
   return (
     <div>
-
+      <Navbar />
       <div className="world--container">
         <div className="container">
           <h2>Climate</h2>

@@ -6,6 +6,10 @@
   margin: 7rem auto;
   min-height: 80vh;
   max-height: 100%;
+
+  @include for-phone-only {
+    grid-template-columns: 1fr;
+  }
 }
 
 .tech--h2 {

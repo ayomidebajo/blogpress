@@ -8,8 +8,7 @@ import Footer from "../../layouts/footer/Footer";
 const Tech = () => {
   return (
     <div>
-     
-
+      <Navbar />
       <div className="container">
         <div className="tech--container">
           <div className="fullstack--box">
@@ -74,7 +73,7 @@ const Tech = () => {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

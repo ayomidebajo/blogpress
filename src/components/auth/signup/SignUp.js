@@ -26,14 +26,14 @@ class SignUp extends Component {
 
   render() {
     const { auth, authError } = this.props;
-    if (auth.uid) return <Redirect to="/home" />;
+    if (auth.uid) return <Redirect to="/" />;
     return (
       <>
         <div className="login--container">
           {/* there should be an if statement for the routing of the logo (blogpress) */}
           <aside className="left__side--bar">
             <header className="signup--header">
-              <Link to="!#" className="logo">
+              <Link to="/" className="logo">
                 <img src={Logo} alt="logo" />
               </Link>
               <p className="member">
