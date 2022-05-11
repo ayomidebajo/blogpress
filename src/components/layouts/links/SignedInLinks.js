@@ -40,8 +40,8 @@ const SignedInLinks = (props) => {
           </NavLink>
         </li>
 
-        <li>
-          <Link to="/signin" className="black-text" onClick={props.signOut}>
+        <li className="black-text">
+          <Link to="/signin"  onClick={props.signOut}>
             Log out
           </Link>
         </li>
